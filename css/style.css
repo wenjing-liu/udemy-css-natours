@@ -42,47 +42,49 @@ body {
   background-position: top;
   /* top vs bottom vs center */
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3.5rem; }
-
-.header__logo:hover {
-  animation: moveInRight 10s ease-out; }
-
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* in relation with parent */
-  transform: translate(-50%, -50%);
-  /* in relation with element itself*/
-  text-align: center;
-  /* set inline and inline-block element to the center */ }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__logo:hover {
+    animation: moveInRight 10s ease-out; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* in relation with parent */
+    transform: translate(-50%, -50%);
+    /* in relation with element itself*/
+    text-align: center;
+    /* set inline and inline-block element to the center */ }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  /*
-	animation-delay: 3s;
-	animation-iteration-count: 3;
-	*/ }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /*
+		animation-delay: 3s;
+		animation-iteration-count: 3;
+		*/ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out; }
 
 @keyframes moveInLeft {
   0% {
@@ -93,13 +95,6 @@ body {
   100% {
     opacity: 1;
     transform: translateX(0); } }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-  animation: moveInRight 1s ease-out; }
 
 @keyframes moveInRight {
   0% {
@@ -119,8 +114,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   /* initial state */
   display: inline-block;
   text-transform: uppercase;
@@ -137,6 +131,9 @@ body {
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* x  y blur color */ }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   /* click state */
@@ -146,6 +143,8 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777; }
+  .btn--white::after {
+    background-color: white; }
 
 .btn::after {
   content: "";
@@ -160,13 +159,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all .4s; }
-
-.btn--white::after {
-  background-color: white; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
