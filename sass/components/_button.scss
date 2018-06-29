@@ -35,6 +35,14 @@
 		}
 	}
 
+	&--green {
+		background-color: $color-primary;
+		color: #fff;
+		&::after {
+			background-color: white;
+		}
+	}
+
 	&::after {
 		content: "";
 		display: inline-block;  /* pesudo element must set content and display */
