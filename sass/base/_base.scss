@@ -9,9 +9,43 @@
 	box-sizing: inherit; /* force box-sizing to inherit */
 }
 
+
+
+
+
+
+
 html {
 	font-size: 62.5%;   /*  (10px/16px) * 100% use percentage to set root font-size */
+	// for the default font size, which translates to one rem, so basically, this font size here is what defines the size of our entire layout. By using rem, we will make the entire layout of the webpage dependent on the font size, that's a good thing because now, in responsice design, we can simply change the font size in one place, and then all of these measurements in rem, all of them will scale up or down according to this font size. That's a huge advantage and time saver. So with this trick, we simply need to increase or decrease the font size here, then the design will basically shrink.
+
+	// the order of this is important, because when  tab-land width and  tab-port width are conflicting, in this order, the smaller media query is applying.
+	@include respond(tab-land) {  //  width < 1200px
+		font-size: 56.25%; // 1rem = 9px, 9/16px = 56.25%
+	}
+
+	@include respond(tab-port) {   // width <900px
+		font-size: 50%;  // 1rem = 8px, 8/16px = 50%
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%; // 1rem = 12px, 12/16 = 75%
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 body {
 	/* reset these in body, 
