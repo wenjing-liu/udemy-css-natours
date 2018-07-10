@@ -33,23 +33,14 @@ html {
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 body {
 	/* reset these in body, 
 	*  Beacuse these propterties are inheritance 
 	*/
 	box-sizing: border-box;
+	padding: 3rem;
+
+	@include respond(tab-port) {
+		padding: 0;
+	}
 }
