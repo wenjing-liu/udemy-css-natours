@@ -35,9 +35,9 @@
 	}
 	*/
 	// combine the above two, the comma is "||" condition
-	@media(min-resolution: 192dpi) and (min-width: 37em), 
-		  (-webkit-min-device-pixel-ration: 2) and (min-width: 37em),
-		  (min-width: 125em) { 
+	@media only screen and (min-resolution: 192dpi) and (min-width: 37em), 
+	       only screen and (-webkit-min-device-pixel-ration: 2) and (min-width: 37em),
+		   only screen and (min-width: 125em) { 
 		background-image: linear-gradient(
 			to right bottom,
 			rgba($color-primary-light, 0.8),

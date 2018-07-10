@@ -143,6 +143,11 @@
     }
 
     @include respond(tab-port) {
+    
+    // @media only screen and (max-width: 56.25em),
+    // only screen and (hover: none) {
+        
+    // }
         height: auto; // because the child element set absolute position, it does not have height, need to set height of it
         border-radius: 3px;
         background-color: $color-white;

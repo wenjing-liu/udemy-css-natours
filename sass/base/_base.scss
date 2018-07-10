@@ -44,3 +44,8 @@ body {
 		padding: 0;
 	}
 }
+
+::selection { // when select text
+	background-color: $color-primary;
+	color: $color-white;
+}
